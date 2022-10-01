@@ -39,7 +39,7 @@ Generate **.env** file from the **.env-example**
 ```
 cp .env-example .env 
 ```
-* For Windows *
+*For Windows*
 ```
 copy .env-example .env
 ```
