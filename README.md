@@ -18,28 +18,32 @@ CREATE TABLE products(
 );
 ```
 ### Clone the project
-First, start by creating a directory for the project/ application
-```
-mkdir expressjs-api
-cd expressjs-api
-```
 
 Clone the project by running:
 ```
 git clone https://github.com/Mosagwe/crud-api-expressjs.git
 
 ```
-### .env file
-Generate **.env** file from the **.env-example**
+
+Change directory 
 ```
-cp .env-example .env
+cd crud-api-expressjs
 ```
-Configure the environment variables according to your server setup.
 
 ### Install node packages
 ```
 npm install --save body-parser express dotenv cors pg
 ```
+### Configure .env file
+Generate **.env** file from the **.env-example**
+```
+cp .env-example .env 
+```
+* For Windows *
+```
+copy .env-example .env
+```
+Configure the environment variables according to your server setup.
 
 ### Start the application
 ```
@@ -48,6 +52,15 @@ npm start
 
 ### Test the RESTful API
 You can use [Postman](https://postman.com) to test the APIs.
+
+** Sample POST Json **
+```
+{
+    "name":"Keyboard",
+    "description":"The MX Keys made by Logitech Trademark",
+    "weight":"0.8kg"
+}
+```
 
 
 
