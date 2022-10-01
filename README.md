@@ -27,6 +27,21 @@ Clone the project by running:
 git clone https://github.com/Mosagwe/crud-api-expressjs.git
 
 ```
+### .env file
+Generate .env file from the .env-example
+```
+cp .env-example .env
+```
+Configure the environment variables according to your server setup.
+
+### Start the application
+```
+npm start
+```
+
+### Test the RESTful API
+You can use [Postman](https://postman.com) to test the APIs.
+
 
 
 
