@@ -10,7 +10,7 @@ export const getProducts= async (req,res)=>{
 
 export const createProduct=async (req,res)=>{
     try { 
-           const {name,age}=req.body;
+           const {name,description,weight}=req.body;
             //Check if record exists
             pool.query(queries.checkNameExists,[name],(error,results)=>{
                 if(error) throw error;
@@ -20,7 +20,7 @@ export const createProduct=async (req,res)=>{
                     return;
                 }                
                 //Add record to the database
-                pool.query(queries.addProduct,[name,age],(err,results)=>{          
+                pool.query(queries.addProduct,[name,description,weight],(err,results)=>{          
                     if(err){
                         console.log(err)
                     }
@@ -64,7 +64,7 @@ export const deleteProduct=(req,res)=>{
 
 export const updateProduct=(req,res)=>{
     const id=parseInt(req.params.id);
-    const { name, age } = req.body;
+    const { name, description, weight } = req.body;
     pool.query(queries.getProductById,[id],(err,results)=>{
         if(err) throw err;
         const noRecordFound = !results.rows.length;
@@ -72,7 +72,7 @@ export const updateProduct=(req,res)=>{
             res.send('Record not found in the database.')
             return
         }
-        pool.query(queries.updateProduct,[name, age, id],(err,results)=>{
+        pool.query(queries.updateProduct,[name, description, weight, id],(err,results)=>{
             if(err) throw err;
             res.status(200).send(`Record updated successfully.`);
             console.log('Record updated successfully.')

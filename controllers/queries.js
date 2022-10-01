@@ -1,11 +1,11 @@
 
 
-const getProductById="SELECT * FROM students where id=$1";
-const getProductsAll="SELECT * FROM students";
-const checkNameExists="SELECT * FROM students where name=$1";
-const addProduct="INSERT INTO students(name,age) values ($1,$2)";
-const updateProduct="UPDATE students SET name=$1, age=$2 where id=$3";
-const removeProduct="DELETE FROM students where id=$1";
+const getProductById="SELECT * FROM products where id=$1";
+const getProductsAll="SELECT * FROM products";
+const checkNameExists="SELECT * FROM products where name=$1";
+const addProduct="INSERT INTO products(name,description,weight) values ($1,$2,$3)";
+const updateProduct="UPDATE products SET name=$1, description=$2, weight=$3 where id=$4";
+const removeProduct="DELETE FROM products where id=$1";
 
 
 export default {
