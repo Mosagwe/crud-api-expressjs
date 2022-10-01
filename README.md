@@ -53,7 +53,7 @@ npm start
 ### Test the RESTful API
 You can use [Postman](https://postman.com) to test the APIs.
 
-** Sample POST Json **
+**Sample POST Json**
 ```
 {
     "name":"Keyboard",
