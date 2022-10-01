@@ -6,12 +6,15 @@ These are the packages installed:
 
 ## PostgreSQL Database table
 Create the table using the following DML command:
+```
 CREATE TABLE products(
     id SERIAL PRIMARY KEY,
     name varchar(255),
     description varchar(255),
     weight varchar(255)
 );
+```
+
 
 
 
