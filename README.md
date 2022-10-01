@@ -36,6 +36,11 @@ cp .env-example .env
 ```
 Configure the environment variables according to your server setup.
 
+### Install node packages
+```
+npm install --save body-parser express dotenv cors pg
+```
+
 ### Start the application
 ```
 npm start
