@@ -6,6 +6,8 @@ These are the packages installed:
 
 ## Getting started
 ### PostgreSQL Database table
+> Uses PostgreSQL database
+
 Create the table using the following DML command:
 ```
 CREATE TABLE products(
@@ -28,7 +30,7 @@ git clone https://github.com/Mosagwe/crud-api-expressjs.git
 
 ```
 ### .env file
-Generate .env file from the .env-example
+Generate **.env** file from the **.env-example**
 ```
 cp .env-example .env
 ```
